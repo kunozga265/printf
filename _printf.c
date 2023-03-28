@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && (check == 1))
 		{
 			_putchar('%');
+			check = 0;
 			sum++;
 		}
 		else
