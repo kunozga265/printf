@@ -14,7 +14,7 @@ int p_char(va_list ap)
 }
 
 /**
- * p_int - prints int
+ * p_string - prints string
  * @ap: arg
  * Return: Nothing
  */
