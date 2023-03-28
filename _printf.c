@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 			else if (format[i] == '%')
 			{
 				_putchar('%');
+				sum++;
 			}
 			check = 0;
 
@@ -31,12 +32,6 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && (check == 0))
 		{
 			check = 1;
-		}
-		else if (format[i] == '%' && (check == 1))
-		{
-			_putchar('%');
-			check = 0;
-			sum++;
 		}
 		else
 		{
