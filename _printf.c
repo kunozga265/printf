@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	int i = 0, sum = 0, check = 0;
 
 	va_start(ap, format);
-	while (format[i] != '\0')
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (check == 1)
 		{
@@ -38,7 +38,6 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			sum++;
 		}
-		i++;
 	}
 	va_end(ap);
 	return (sum);
