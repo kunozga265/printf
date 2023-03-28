@@ -21,6 +21,10 @@ int _printf(const char *format, ...)
 			{
 				sum += get_op_func(format + i)(ap);
 			}
+			else if (format[i] == '%')
+			{
+				_putchar('%');
+			}
 			check = 0;
 
 		}
