@@ -13,10 +13,10 @@ int _printf(const char *format, ...);
 typedef struct op
 {
 	char *op;
-	void (*f)(va_list ap);
+	int (*f)(va_list ap);
 } op_t;
-void (*get_op_func(const char * const s))(va_list);
-void p_char(va_list ap);
-void p_string(va_list ap);
+int (*get_op_func(const char * const s))(va_list);
+int p_char(va_list ap);
+int p_string(va_list ap);
 
 #endif /* MAIN_H */

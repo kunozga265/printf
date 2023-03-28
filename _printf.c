@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		{
 			if (*get_op_func(format + i) != NULL)
 			{
-				get_op_func(format + i)(ap);
+				sum += get_op_func(format + i)(ap);
 			}
 			check = 0;
 

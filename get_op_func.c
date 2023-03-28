@@ -7,7 +7,7 @@
  * @s: pointer
  * Return: Pointer
  */
-void (*get_op_func(const char * const s))(va_list)
+int (*get_op_func(const char * const s))(va_list)
 {
 	op_t ops[] = {
 		{"c", p_char},

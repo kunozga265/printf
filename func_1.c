@@ -7,9 +7,10 @@
  * @ap: arg
  * Return: Nothing
  */
-void p_char(va_list ap)
+int p_char(va_list ap)
 {
 	_putchar(va_arg(ap, int));
+	return (1);
 }
 
 /**
@@ -17,7 +18,7 @@ void p_char(va_list ap)
  * @ap: arg
  * Return: Nothing
  */
-void p_string(va_list ap)
+int p_string(va_list ap)
 {
 	char *s;
 	int i;
@@ -27,4 +28,5 @@ void p_string(va_list ap)
 	{
 		_putchar(s[i]);
 	}
+	return (i);
 }
