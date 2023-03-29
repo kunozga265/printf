@@ -37,7 +37,7 @@ int p_string(va_list ap)
   */
 void print(long n)
 {
-	if (n < 0) 
+	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
@@ -60,13 +60,10 @@ int p_int(va_list ap)
 
 	val = va_arg(ap, int);
 	print(val);
-	do
-	{
+	do {
 		val /= 10;
 		res++;
-	}
-	while (val != 0);
-
+	} while (val != 0);
 	return (res);
 }
 /**
@@ -81,11 +78,9 @@ int p_int_s(va_list ap)
 
 	val = va_arg(ap, unsigned int);
 	print(val);
-	do
-	{
+	do {
 		val /= 10;
 		res++;
-	}
-	while (val != 0);
+	} while (val != 0);
 	return (res);
 }
