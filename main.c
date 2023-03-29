@@ -44,5 +44,11 @@ int main(void)
 	printf("Unknown:[%r]\n");
 	_printf("Binary:[%b]\n", len);
 	printf("Binary:[%b]\n", len2);
+	_printf("Unsigned:[%u]\n", 8934);
+	printf("Unsigned:[%u]\n", 8934);
+	_printf("Octal:[%o]\n", 78);
+	printf("Octal:[%o]\n", 78);
+	_printf("Hex:[%x]\n", 45);
+	printf("Hex:[%x]\n", 45);
 	return (0);
 }

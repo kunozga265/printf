@@ -20,6 +20,10 @@ int p_char(va_list ap);
 int p_string(va_list ap);
 int p_int(va_list ap);
 int p_int_s(va_list ap);
+void print(long n);
 int p_dec_bin(va_list ap);
+int p_dec_hex(va_list ap);
+int p_int_u(va_list ap);
+int p_dec_oct(va_list ap);
 
 #endif /* MAIN_H */

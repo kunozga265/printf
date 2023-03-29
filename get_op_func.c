@@ -15,6 +15,9 @@ int (*get_op_func(const char * const s))(va_list)
 		{"i", p_int_s},
 		{"s", p_string},
 		{"b", p_dec_bin},
+		{"o", p_dec_oct},
+		{"x", p_dec_hex},
+		{"u", p_int_u},
 		{NULL, NULL}
 	};
 	int i = 0;
