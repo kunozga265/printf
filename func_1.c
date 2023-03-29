@@ -60,6 +60,11 @@ int p_int(va_list ap)
 
 	val = va_arg(ap, int);
 	print(val);
+
+	if (val < 0)
+	{
+		val = -val;
+	}
 	do {
 		val /= 10;
 		res++;
@@ -78,6 +83,10 @@ int p_int_s(va_list ap)
 
 	val = va_arg(ap, signed int);
 	print(val);
+	if (val < 0)
+	{
+		val = -val;
+	}
 	do {
 		val /= 10;
 		res++;
