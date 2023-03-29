@@ -74,9 +74,9 @@ int p_int(va_list ap)
 int p_int_s(va_list ap)
 {
 	int res = 0;
-	unsigned int val;
+	signed int val;
 
-	val = va_arg(ap, unsigned int);
+	val = va_arg(ap, signed int);
 	print(val);
 	do {
 		val /= 10;

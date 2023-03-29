@@ -26,6 +26,12 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				sum++;
 			}
+			else
+			{
+				_putchar('%');
+				_putchar(format[i]);
+
+			}
 			check = 0;
 
 		}
