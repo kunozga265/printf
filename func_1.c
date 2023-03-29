@@ -5,7 +5,7 @@
 /**
  * p_char - prints char
  * @ap: arg
- * Return: Nothing
+ * Return: Num of chars printed
  */
 int p_char(va_list ap)
 {
@@ -16,7 +16,7 @@ int p_char(va_list ap)
 /**
  * p_string - prints string
  * @ap: arg
- * Return: Nothing
+ * Return: Num of chars printed
  */
 int p_string(va_list ap)
 {
@@ -29,4 +29,63 @@ int p_string(va_list ap)
 		_putchar(s[i]);
 	}
 	return (i);
+}
+/**
+  * print - prints numbers
+  * @n: number
+  * Return: Nothing
+  */
+void print(long n)
+{
+	if (n < 0) 
+	{
+		_putchar('-');
+		n = -n;
+	}
+	if (n / 10)
+	{
+		print(n / 10);
+	}
+	_putchar((n % 10) + '0');
+}
+/**
+ * p_int - prints int
+ * @ap: arg
+ * Return: Num of chars printed
+ */
+int p_int(va_list ap)
+{
+	int res = 0;
+	int val;
+
+	val = va_arg(ap, int);
+	print(val);
+	do
+	{
+		val /= 10;
+		res++;
+	}
+	while (val != 0);
+
+	return (res);
+}
+/**
+ * p_int_s - prints unsigned int
+ * @ap: arg
+ * Return: Num of chars printed
+ */
+int p_int_s(va_list ap)
+{
+	int res = 0;
+	unsigned int val;
+
+	val = va_arg(ap, unsigned int);
+	print(val);
+	do
+	{
+		val /= 10;
+		res++;
+	}
+	while (val != 0);
+	return (res);
 }

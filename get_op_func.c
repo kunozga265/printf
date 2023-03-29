@@ -11,10 +11,8 @@ int (*get_op_func(const char * const s))(va_list)
 {
 	op_t ops[] = {
 		{"c", p_char},
-		/**
-		  * {"i", p_int},
-		  * {"f", p_float},
-		  */
+		{"d", p_int},
+		{"i", p_int_s},
 		{"s", p_string},
 		{NULL, NULL}
 	};
