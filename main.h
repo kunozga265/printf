@@ -20,5 +20,6 @@ int p_char(va_list ap);
 int p_string(va_list ap);
 int p_int(va_list ap);
 int p_int_s(va_list ap);
+int p_dec_bin(va_list ap);
 
 #endif /* MAIN_H */
