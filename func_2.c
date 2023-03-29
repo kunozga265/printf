@@ -116,3 +116,41 @@ int p_dec_hex(va_list ap)
 	}
 	return (i);
 }
+/**
+ * p_dec_hex - prints unsigned int
+ * @ap: arg
+ * Return: Num of chars printed
+ */
+int p_dec_hex_c(va_list ap)
+{
+	int hNum[100];
+	int j = 0, i = 0, temp;
+	unsigned int num;
+
+	num = va_arg(ap, unsigned int);
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+
+	for ( ; num > 0; )
+	{
+		temp = num % 16;
+		if (temp < 10)
+		{
+			temp += 48;
+		}
+		else
+		{
+			temp += 55;
+		}
+		hNum[i++] = temp;
+		num /= 16;
+	}
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putchar(hNum[j]);
+	}
+	return (i);
+}

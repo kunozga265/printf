@@ -50,5 +50,7 @@ int main(void)
 	printf("Octal:[%o]\n", 78);
 	_printf("Hex:[%x]\n", 45);
 	printf("Hex:[%x]\n", 45);
+	_printf("Hex:[%X]\n", 45);
+	printf("Hex:[%X]\n", 45);
 	return (0);
 }
